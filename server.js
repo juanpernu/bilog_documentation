@@ -7,8 +7,7 @@ dotenv.config({ path: './config.env' });
 const app = require('./app');
 
 const port = process.env.PORT || 3000;
-const DBpass = process.env.DATABASE_PASSWORD;
-const DB = process.env.DATABASE.replace('<PASSWORD>', DBpass);
+const DB = process.env.MONGODB_URI;
 
 // Read the certificates
 // const ca = [fs.readFileSync(`${__dirname}/ssl/ca.pem`)];
